@@ -1,0 +1,4 @@
+outs:
+- md5: 6305ade2051d1f640a23a4c029fbe36e
+  size: 5064273
+  path: disaster_messages.csv

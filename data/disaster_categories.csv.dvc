@@ -1,0 +1,4 @@
+outs:
+- md5: 56d4dd730b1ac43e34f8dfbed23300aa
+  size: 11854295
+  path: disaster_categories.csv
