@@ -1,0 +1,4 @@
+outs:
+- md5: a183ca61d5d81282c8d23416cb926d83
+  size: 6438912
+  path: DisasterResponse.db
