@@ -7,6 +7,10 @@ class ETLPipe:
         self._df = None
         self.engine = create_engine('sqlite:///' + database_filepath)
 
+    @property
+    def data(self):
+        return self._df
+
     def load_data_csv(self, messages_filepath, categories_filepath, clean_data=False):
         """ loads data from csv files and merges them into a DataFrame
         :param str messages_filepath: absolute path to the messages csv file
@@ -77,5 +81,8 @@ if __name__ == '__main__':
     etl_pipe = ETLPipe(database_filepath)
 
     df = etl_pipe.load_data_csv(messages_filepath, categories_filepath, clean_data=True)
-    print(df.head())
+    print(etl_pipe.data)
+
+    etl_pipe.save_data_db(df, 'messages')
+
 
